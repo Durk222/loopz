@@ -275,39 +275,51 @@ b, strong, .tag-highlight, .trend-cat {
    ========================================================================== */
 
 .post-creator {
-    padding: 20px;
-    border-bottom: 1px solid var(--shadows); /* Separador sutil */
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--shadows);
     background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
 }
 
-.creator-header {
+.creator-top {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 15px;
+}
+
+.creator-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-greeting {
+    font-weight: 700;
+    font-size: 0.95rem;
     color: var(--text);
 }
 
-.creator-actions {
+.placeholder-text {
+    color: #BBB6D6; 
+    font-size: 0.9rem;
+}
+
+.creator-bottom {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: space-between; 
+    align-items: center;
+    padding-left: 52px;
 }
 
 .media-attach, .post-types {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     color: var(--details);
-    cursor: pointer;
+    font-size: 1.1rem;
 }
 
 .media-attach i:hover, .post-types i:hover {
     color: var(--accent);
-}
-
-.profile-pic-small {
-    width: 40px;
-    height: 40px;
-    background-color: var(--shadows);
-    border-radius: 8px;
+    cursor: pointer;
 }
