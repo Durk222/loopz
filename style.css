@@ -336,3 +336,64 @@ b, strong, .tag-highlight, .trend-cat {
     display: flex;
     gap: 18px;
 }
+
+/* ==========================================================================
+   PLANTILLA DE POST
+   ========================================================================== */
+
+.post-card {
+    padding: 20px;
+    border-bottom: 1px solid var(--shadows);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.username { font-weight: 700; color: var(--text); }
+.timestamp { font-size: 0.8rem; color: var(--details); }
+
+.post-text { color: var(--text); line-height: 1.5; margin-bottom: 10px; }
+
+/* Carrusel y Puntos */
+.post-media-carousel { position: relative; }
+.media-placeholder { 
+    background: var(--shadows); 
+    height: 250px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 8px;
+    color: var(--details);
+}
+
+.carousel-dots { 
+    display: flex; 
+    justify-content: center; 
+    gap: 8px; 
+    margin-top: 10px; 
+}
+
+.dot { 
+    width: 8px; height: 8px; border-radius: 50%; 
+    background: var(--shadows); 
+}
+.dot.active { background: var(--accent); }
+
+/* Acciones abajo */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    color: var(--details);
+}
+
+.left-actions { display: flex; gap: 20px; }
+.post-actions i:hover { color: var(--accent); cursor: pointer; }
