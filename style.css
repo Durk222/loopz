@@ -1,0 +1,250 @@
+/* ==========================================================================
+   VARIABLES GLOBALES
+   ========================================================================== */
+:root {
+    --bg: #3C1F76;         /* Meteorite */
+    --details: #6C3082;    /* Eminence */
+    --shadows: #040348;    /* Night Blue */
+    --accent: #23DF10;     /* Vibrant Green */
+    --text: #FCFFF9;       /* Ceramic */
+}
+
+/* ==========================================================================
+   RESET GLOBAL & ANTI-SCROLL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Muy Frutiger Metro */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow: hidden; /* CERO SCROLL GLOBAL */
+    height: 100vh;
+}
+
+/* ==========================================================================
+   LAYOUT GRID PRINCIPAL
+   ========================================================================== */
+.parent {
+    display: grid;
+    /* 1ra columna fija (nav), las del medio flexibles, la última fija (tendencias) */
+    grid-template-columns: 72px repeat(4, 1fr) 280px; 
+    grid-template-rows: 64px repeat(4, 1fr) 1fr;
+    gap: 8px;
+    height: 100vh;
+    padding: 8px;
+}
+
+/* Bordes y estilos base para identificar las cajas */
+.box {
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background-color: var(--shadows); 
+}
+
+.div1 { grid-row: span 6 / span 6; grid-column: 1; }
+.div2 { grid-column: span 5 / span 5; grid-row: 1; }
+.div3 { grid-column: 2 / 6; grid-row: 2 / 7; }
+.div4 { grid-row: 2 / 4; grid-column: 6; }
+.div5 { grid-row: 4 / 6; grid-column: 6; }
+.div6 { grid-row: 6 / 7; grid-column: 6; }
+
+/* ==========================================================================
+   DIV 1: NAV BAR VERTICAL
+   ========================================================================== */
+.nav-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.nav-icons i {
+    font-size: 1.4rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-icons i:hover {
+    color: var(--accent);
+}
+
+.separator {
+    width: 40px;
+    height: 1px;
+    background-color: var(--details);
+    margin: 10px 0;
+}
+
+.create-realm {
+    width: 40px;
+    height: 40px;
+    border: 2px dotted var(--text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.create-realm i { color: var(--text); font-size: 1rem; }
+.create-realm:hover { border-color: var(--accent); }
+.create-realm:hover i { color: var(--accent); }
+
+/* ==========================================================================
+   DIV 2: TOP BAR
+   ========================================================================== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.topbar-left, .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo { color: var(--accent); font-weight: 800; font-size: 1.5rem; letter-spacing: -1px;}
+
+.topbar i { font-size: 1.2rem; cursor: pointer; transition: color 0.2s; }
+.topbar i:hover { color: var(--accent); }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    border: 1px solid var(--details);
+    border-radius: 6px;
+    padding: 6px 12px;
+    width: 300px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    background-color: var(--details);
+    border-radius: 6px; /* Cero círculos, estilo Metro */
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   DIV 3: FEED & CUSTOM SCROLLBAR
+   ========================================================================== */
+.feed-container {
+    overflow-y: auto; /* Activa el scroll solo en esta caja */
+    overflow-x: hidden;
+    position: relative;
+}
+
+.feed-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--details);
+    opacity: 0.5;
+}
+
+.feed-container::-webkit-scrollbar {
+    width: 8px;
+}
+.feed-container::-webkit-scrollbar-track {
+    background: var(--shadows);
+    border-radius: 0 6px 6px 0;
+}
+.feed-container::-webkit-scrollbar-thumb {
+    background: var(--details);
+    border-radius: 6px;
+}
+.feed-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* ==========================================================================
+   DIV 4, 5, 6: WIDGETS TENDENCIAS
+   ========================================================================== */
+.trends-widget {
+    padding: 15px;
+}
+
+.trends-title {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--details);
+    padding-bottom: 5px;
+}
+
+.trend-item {
+    margin-bottom: 15px;
+}
+
+.trend-cat {
+    font-size: 0.7rem;
+    color: var(--details);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.trend-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.trend-content i {
+    color: var(--accent);
+}
+
+.tag-highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE FRIENDLY
+   ========================================================================== */
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto; /* Devuelve el scroll al body en móviles */
+    }
+    
+    .parent {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .div1 { order: 2; height: 60px; }
+    .nav-icons { flex-direction: row; justify-content: space-around; padding: 0; align-items: center; height: 100%; }
+    .separator { width: 1px; height: 30px; margin: 0 10px; }
+    
+    .div2 { order: 1; height: auto; flex-wrap: wrap; gap: 10px; padding: 10px; }
+    .search-bar { width: 100%; }
+    .topbar-center { width: 100%; order: 3; margin-top: 10px; }
+    
+    .div3 { order: 3; min-height: 80vh; overflow: visible; }
+    
+    .div4, .div5, .div6 { order: 4; }
+}
