@@ -52,7 +52,7 @@ b, strong, .tag-highlight, .trend-cat {
     gap: 1px; 
     height: 100vh;
     padding: 0;
-    background-color: var(--shadows);
+    background-color: var(--bg);
 }
 
 .box {
