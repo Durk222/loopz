@@ -275,12 +275,12 @@ b, strong, .tag-highlight, .trend-cat {
    ========================================================================== */
 
 .post-creator {
-    padding: 16px 20px;
+    padding: 20px;
     border-bottom: 1px solid var(--shadows);
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
-    gap: 16px; 
+    gap: 15px;
 }
 
 .creator-top {
@@ -289,37 +289,50 @@ b, strong, .tag-highlight, .trend-cat {
     gap: 12px;
 }
 
-.creator-input {
-    display: flex;
-    flex-direction: column;
+/* El estilo de "Buscador" aplicado al input */
+.input-box {
+    flex: 1;
+    border: 1px solid var(--shadows);
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: text;
+    transition: border-color 0.2s;
+}
+
+.input-box:hover {
+    border-color: var(--details); /* Feedback visual al pasar el mouse */
 }
 
 .user-greeting {
+    display: block;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text);
+    margin-bottom: 4px;
 }
 
 .placeholder-text {
-    color: #BBB6D6; 
-    font-size: 0.9rem;
+    color: var(--details);
+    font-size: 0.95rem;
+}
+
+.profile-pic-small {
+    width: 40px;
+    height: 40px;
+    background-color: var(--shadows);
+    border-radius: 8px;
+    flex-shrink: 0;
 }
 
 .creator-bottom {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding-left: 52px;
-}
-
-.media-attach, .post-types {
-    display: flex;
-    gap: 16px;
+    justify-content: space-between;
+    padding-left: 52px; /* Alineado con el input box */
     color: var(--details);
     font-size: 1.1rem;
 }
 
-.media-attach i:hover, .post-types i:hover {
-    color: var(--accent);
-    cursor: pointer;
+.media-attach, .post-types {
+    display: flex;
+    gap: 18px;
 }
