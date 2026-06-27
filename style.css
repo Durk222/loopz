@@ -12,17 +12,29 @@
 /* ==========================================================================
    RESET GLOBAL & ANTI-SCROLL
    ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Muy Frutiger Metro */
+/* Texto normal (Medium 500) aplicado a todo el cuerpo por defecto */
+body {
+    font-weight: 500;
+    background-color: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Títulos (Bold 700) */
+h1, h2, h3, h4, h5, h6, .logo, .trends-title {
+    font-weight: 700;
+}
+
+/* Hashtags, negritas y categorías (SemiBold 600) */
+b, strong, .tag-highlight, .trend-cat {
+    font-weight: 600;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
-    overflow: hidden; /* CERO SCROLL GLOBAL */
+    overflow: hidden; 
     height: 100vh;
 }
 
