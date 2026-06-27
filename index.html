@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loopz</title>
-    <!-- Google Fonts: Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <!-- JS Principal -->
     <script type="module" src="script.js" defer></script>
 </head>
 <body>
 
     <div class="parent">
-        <!-- 1: NAV BAR VERTICAL -->
         <div class="box div1">
             <div class="nav-icons">
                 <i class="fa-solid fa-comments" title="Chat y Amigos"></i>
@@ -32,14 +26,12 @@
                 
                 <div class="separator"></div>
                 
-                <!-- Botón Crear Reino -->
                 <div class="create-realm" title="Nuevo Reino">
                     <i class="fa-solid fa-plus"></i>
                 </div>
             </div>
         </div>
 
-        <!-- 2: BARRA SUPERIOR -->
         <div class="box div2 topbar">
             <div class="topbar-left">
                 <h2 class="logo">Loopz</h2>
@@ -62,63 +54,59 @@
             </div>
         </div>
 
-        <!-- 3: FEED PRINCIPAL (Scroll Infinito) -->
         <div class="box div3 feed-container">
             <div class="feed-placeholder">3</div>
-            <!-- Hack para forzar scroll visual y que pruebes la barra custom -->
             <div style="height: 2000px;"></div> 
         </div>
 
-        <!-- 4: SUGERENCIAS (Espacio para el algoritmo) -->
-        <div class="box div4">
-            <div class="trends-widget">
-                <h3 class="trends-title">Tendencias para ti</h3>
-                
-                <div class="trend-item">
-                    <span class="trend-cat">Noticias</span>
-                    <div class="trend-content">
-                        <i class="fa-solid fa-newspaper"></i>
-                        <p>Información no disponible</p>
+        <div class="right-column">
+            
+            <div class="box div4">
+                <div class="trends-widget">
+                    <h3 class="trends-title">Tendencias para ti</h3>
+                    
+                    <div class="trend-item">
+                        <span class="trend-cat">Noticias</span>
+                        <div class="trend-content">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <p>Información no disponible</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="trend-item">
-                    <span class="trend-cat">Hashtags</span>
-                    <div class="trend-content">
-                        <p class="tag-highlight">Información no disponible</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 5: SUGERENCIAS (Espacio para el algoritmo) -->
-        <div class="box div5">
-            <div class="trends-widget">
-                <h3 class="trends-title">Reinos Populares</h3>
-                <div class="trend-item">
-                    <span class="trend-cat">Roleplay</span>
-                    <div class="trend-content">
-                        <i class="fa-solid fa-dragon"></i>
-                        <p>Información no disponible</p>
+                    <div class="trend-item">
+                        <span class="trend-cat">Hashtags</span>
+                        <div class="trend-content">
+                            <p class="tag-highlight">Información no disponible</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 6: SUGERENCIAS (Espacio para el algoritmo) -->
-        <div class="box div6">
-             <div class="trends-widget">
-                <h3 class="trends-title">Música en Tendencia</h3>
-                <div class="trend-item">
-                    <span class="trend-cat">Música</span>
-                    <div class="trend-content">
-                        <i class="fa-solid fa-music"></i>
-                        <p>Información no disponible</p>
+            <div class="box div5">
+                <div class="trends-widget">
+                    <h3 class="trends-title">Reinos Populares</h3>
+                    <div class="trend-item">
+                        <span class="trend-cat">Roleplay</span>
+                        <div class="trend-content">
+                            <i class="fa-solid fa-dragon"></i>
+                            <p>Información no disponible</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-</body>
+            <div class="box div6">
+                 <div class="trends-widget">
+                    <h3 class="trends-title">Música en Tendencia</h3>
+                    <div class="trend-item">
+                        <span class="trend-cat">Música</span>
+                        <div class="trend-content">
+                            <i class="fa-solid fa-music"></i>
+                            <p>Información no disponible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> </body>
 </html>
