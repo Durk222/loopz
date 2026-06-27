@@ -269,3 +269,45 @@ b, strong, .tag-highlight, .trend-cat {
 .tag-highlight {
     color: var(--accent);
 }
+
+/* ==========================================================================
+   Post Header
+   ========================================================================== */
+
+.post-creator {
+    padding: 20px;
+    border-bottom: 1px solid var(--shadows); /* Separador sutil */
+    background-color: var(--bg);
+}
+
+.creator-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.creator-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.media-attach, .post-types {
+    display: flex;
+    gap: 20px;
+    color: var(--details);
+    cursor: pointer;
+}
+
+.media-attach i:hover, .post-types i:hover {
+    color: var(--accent);
+}
+
+.profile-pic-small {
+    width: 40px;
+    height: 40px;
+    background-color: var(--shadows);
+    border-radius: 8px;
+}
