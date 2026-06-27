@@ -25,10 +25,11 @@
 }
 
 body {
+    font-size: 14.4px;
     font-weight: 500;
     background-color: var(--bg);
     color: var(--text);
-    overflow: hidden; /* Corta el scroll global */
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
 }
@@ -46,17 +47,16 @@ b, strong, .tag-highlight, .trend-cat {
    ========================================================================== */
 .parent {
     display: grid;
-    grid-template-columns: 72px repeat(4, 1fr) 280px; 
+    grid-template-columns: 65px repeat(4, 1fr) 252px;
     grid-template-rows: 64px 1fr; /* Simplificado a 2 filas: Topbar y el resto */
-    gap: 8px;
+    gap: 7px;
     height: 100vh; /* Ocupa el 100% exacto */
     padding: 8px;
-    zoom: 90%;
 }
 
 .box {
     border: 1px solid var(--shadows);
-    border-radius: 8px;
+    border-radius: 7px;
     background-color: transparent;
 }
 
@@ -92,8 +92,8 @@ b, strong, .tag-highlight, .trend-cat {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding-top: 20px;
+    gap: 18px;
+    padding-top: 18px;
 }
 
 .nav-icons i {
@@ -134,7 +134,7 @@ b, strong, .tag-highlight, .trend-cat {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 18px;
 }
 
 .topbar-left, .topbar-right {
@@ -154,8 +154,8 @@ b, strong, .tag-highlight, .trend-cat {
     background-color: transparent;
     border: 1px solid var(--shadows);
     border-radius: 6px;
-    padding: 6px 12px;
-    width: 300px;
+    padding: 5px 11px;
+    width: 270px;
 }
 
 .search-bar input {
