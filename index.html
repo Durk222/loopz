@@ -14,6 +14,91 @@
 </head>
 <body>
 
+    <!-- OVERLAY DE AUTENTICACIÓN -->
+<div id="auth-overlay" class="auth-overlay">
+    
+    <!-- Topbar del Login -->
+    <header class="auth-topbar">
+        <div class="search-bar auth-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Búsqueda en Loopz..." disabled>
+        </div>
+        <h1 class="logo auth-logo">Loopz</h1>
+        <div class="auth-top-actions">
+            <span class="auth-link">Iniciar sesión</span>
+            <button class="btn-primary auth-create-btn">Crear una cuenta</button>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="auth-main">
+        
+        <!-- Columna Izquierda: Placeholder de Video -->
+        <div class="auth-col-video">
+            <!-- El fondo tomará el color de la variable CSS -->
+        </div>
+
+        <!-- Columna Central: Perfiles Fake y Llamado a la acción -->
+        <div class="auth-col-center">
+            <div class="dummy-profiles-container">
+                <!-- Generamos 4 perfiles falsos -->
+                <div class="dummy-profile"><div class="dp-avatar"></div><div class="dp-lines"><div class="dp-line-1"></div><div class="dp-line-2"></div></div></div>
+                <div class="dummy-profile"><div class="dp-avatar"></div><div class="dp-lines"><div class="dp-line-1"></div><div class="dp-line-2"></div></div></div>
+                <div class="dummy-profile"><div class="dp-avatar"></div><div class="dp-lines"><div class="dp-line-1"></div><div class="dp-line-2"></div></div></div>
+                <div class="dummy-profile"><div class="dp-avatar"></div><div class="dp-lines"><div class="dp-line-1"></div><div class="dp-line-2"></div></div></div>
+                <!-- Divisor con gradiente para el efecto difuminado -->
+                <div class="fade-out-mask"></div>
+            </div>
+            
+            <h2 id="center-title" class="auth-center-title">Create your account and do cool things!</h2>
+            <button id="join-now-btn" class="btn-primary join-now-btn">Join Now</button>
+        </div>
+
+        <!-- Columna Derecha: Formulario de Login -->
+        <div class="auth-col-right">
+            <h2 id="right-title" class="auth-right-title">Es tan fácil cómo ingresar estos datos.</h2>
+            
+            <div class="auth-form">
+                <input type="text" id="login-username" class="input-box auth-input" placeholder="Nombre de usuario, teléfono o correo electrónico">
+                <input type="password" id="login-password" class="input-box auth-input" placeholder="Contraseña">
+                <a href="#" id="forgot-link" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer y Estrellas Mid-Century -->
+    <footer class="auth-footer">
+        <div class="footer-links">
+            <span>Loopz</span>
+            <span>Términos</span>
+            <span>Desarrolladores</span>
+        </div>
+        
+        <!-- Selector de Idioma -->
+        <div class="lang-selector-container">
+            <div class="lang-selector" id="lang-selector">
+                <span id="current-lang">🇪🇸 Español</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="lang-dropdown" id="lang-dropdown">
+                <div class="lang-option" data-lang="es">🇪🇸 Español</div>
+                <div class="lang-option" data-lang="en">🇺🇸 English</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Estrellas -->
+    <svg class="mid-century-stars" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Estrella Grande -->
+        <path d="M60 0L63.5 45.5L100 30L70 56.5L110 70L65 65.5L60 110L55 65.5L10 70L50 56.5L20 30L56.5 45.5L60 0Z" fill="var(--accent)"/>
+        <!-- Estrella Pequeña -->
+        <path d="M100 80L102 92L115 88L105 96L120 100L103 100L100 115L97 100L80 100L95 96L85 88L98 92L100 80Z" fill="var(--details)"/>
+        <!-- Destello -->
+        <path d="M30 90L31 96L37 97L31 98L30 104L29 98L23 97L29 96L30 90Z" fill="var(--accent)"/>
+    </svg>
+</div>
+
     <div class="parent">
         <div class="box div1">
             <div class="nav-icons">
