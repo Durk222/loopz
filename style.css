@@ -1,17 +1,17 @@
 /* ==========================================================================
-   IMPORTACIÓN DE FUENTE (Fredoka 500, 600, 700)
+   IMPORTACIÓN DE FUENTE (Space Grotesk 500, 600, 700)
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /* ==========================================================================
    VARIABLES GLOBALES
    ========================================================================== */
 :root {
-    --bg: #3C1F76;         /* Meteorite */
-    --details: #6C3082;    /* Eminence */
-    --shadows: #040348;    /* Night Blue */
-    --accent: #23DF10;     /* Vibrant Green */
-    --text: #FCFFF9;       /* Ceramic */
+    --bg: #FBFAF3;         /* Bianca */
+    --details: #64767B;    /* Greyish Turquoise */
+    --shadows: #D2E6EB;    /* Link Water */
+    --accent: #7B65BF;     /* Blue Marguerite */
+    --text: #353B50;       /* Bright Grey */
 }
 
 /* ==========================================================================
@@ -21,7 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
@@ -199,7 +199,7 @@ b, strong, .tag-highlight, .trend-cat {
     height: 100%;
     font-size: 5rem;
     font-weight: bold;
-    color: var(--shadows); /* Más sutil */
+    color: var(--shadows);
     opacity: 0.5;
 }
 
@@ -300,7 +300,7 @@ b, strong, .tag-highlight, .trend-cat {
 }
 
 .input-box:hover {
-    border-color: var(--details); /* Feedback visual al pasar el mouse */
+    border-color: var(--details);
 }
 
 .user-greeting {
@@ -327,7 +327,7 @@ b, strong, .tag-highlight, .trend-cat {
 .creator-bottom {
     display: flex;
     justify-content: space-between;
-    padding-left: 52px; /* Alineado con el input box */
+    padding-left: 52px;
     color: var(--details);
     font-size: 1.1rem;
 }
