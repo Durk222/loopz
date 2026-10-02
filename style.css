@@ -397,3 +397,160 @@ b, strong, .tag-highlight, .trend-cat {
 
 .left-actions { display: flex; gap: 20px; }
 .post-actions i:hover { color: var(--accent); cursor: pointer; }
+
+/* ==========================================================================
+   AUTH OVERLAY (PANTALLA DE INICIO DE SESIÓN)
+   ========================================================================== */
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg);
+    z-index: 9999; /* Asegura que tape todo el grid anterior */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+
+/* Header */
+.auth-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.auth-search { width: 250px; opacity: 0.7; pointer-events: none; }
+.auth-logo { font-size: 2rem; color: var(--text); }
+.auth-top-actions { display: flex; align-items: center; gap: 20px; }
+.auth-link { font-weight: 600; cursor: pointer; color: var(--text); }
+.btn-primary {
+    background-color: var(--accent);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; }
+
+/* Main Grid */
+.auth-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Columna 1: Video Placeholder */
+.auth-col-video {
+    height: 80vh;
+    background-color: var(--shadows);
+    border-radius: 12px;
+}
+
+/* Columna 2: Centro (Perfiles + Join Now) */
+.auth-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.dummy-profiles-container {
+    position: relative;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.dummy-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+.dp-avatar { width: 45px; height: 45px; background: var(--shadows); border-radius: 50%; }
+.dp-lines { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.dp-line-1 { height: 12px; width: 100%; background: var(--shadows); border-radius: 6px; }
+.dp-line-2 { height: 12px; width: 60%; background: var(--shadows); border-radius: 6px; }
+.fade-out-mask {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 100px;
+    background: linear-gradient(transparent, var(--bg));
+}
+.auth-center-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--text);
+}
+.join-now-btn { font-size: 1.2rem; padding: 12px 40px; border-radius: 12px; }
+
+/* Columna 3: Formulario Derecha */
+.auth-col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+.auth-right-title { font-size: 2.5rem; line-height: 1.1; margin-bottom: 40px; }
+.auth-form { display: flex; flex-direction: column; gap: 20px; }
+.auth-input { padding: 15px; font-size: 1.1rem; border-radius: 12px; background: transparent; }
+.auth-input:focus { border-color: var(--accent); outline: none; }
+.forgot-password { color: var(--details); text-decoration: none; font-weight: 600; margin-top: 10px; }
+.forgot-password:hover { color: var(--accent); }
+
+/* Footer y Selector de Idioma */
+.auth-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+}
+.footer-links { display: flex; gap: 20px; }
+
+/* Dropdown de Idioma */
+.lang-selector-container { position: relative; }
+.lang-selector {
+    cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 5px 10px;
+}
+.lang-dropdown {
+    position: absolute;
+    bottom: 100%; right: 0;
+    background: var(--bg);
+    border: 1px solid var(--shadows);
+    border-radius: 8px;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    min-width: 120px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.lang-dropdown.show { display: flex; }
+.lang-option { padding: 10px; cursor: pointer; transition: background 0.2s; }
+.lang-option:hover { background: var(--shadows); }
+
+/* Estrellas Vectoriales (Abajo a la derecha) */
+.mid-century-stars {
+    position: absolute;
+    bottom: 60px; /* Justo arriba del footer */
+    right: 40px;
+    pointer-events: none; /* Para que no estorben al clickear */
+}
+
+/* Animación de Error (Temblor) */
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+}
+.error-shake {
+    animation: shakeError 0.4s ease-in-out;
+    border-color: #e74c3c !important; /* Borde rojo temporal */
+}
